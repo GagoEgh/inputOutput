@@ -5,8 +5,7 @@ import { AfterViewInit, Component, OnInit } from '@angular/core';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
-export class AppComponent implements OnInit{
- 
+export class AppComponent implements OnInit {
 
   ngOnInit(): void {
    
@@ -16,19 +15,17 @@ export class AppComponent implements OnInit{
 
 
   onClickAdd(): void {
-
     this.times.push(this.inputValue);
     this.inputValue = '';
-
   }
 
-  onRemove(i: number) {
+  onRemove(i:number) {
     this.times.splice(i, 1);
-
   }
 
-  child(ev: any) {
-    console.log(ev)
+ 
+ 
+  delete(event:number,i:number){
+    this.onRemove(i)
   }
-
 }

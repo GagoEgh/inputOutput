@@ -1,4 +1,8 @@
-<div>
-  {{hour}}:{{minute}}:{{time}}
-
+<div class="time">
+  <div *ngIf="hour>10; else minHour"> {{hour}}</div>
+  <ng-template #minHour> 0{{hour}}</ng-template>
+  :<div *ngIf="minute>10;else minMinute">{{minute}}</div>
+  <ng-template #minMinute>0{{minute}}</ng-template>
+  :<div *ngIf="time>10;else minTime">{{time}}</div>
+  <ng-template #minTime>0{{time}}</ng-template>
 </div>

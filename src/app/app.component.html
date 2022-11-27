@@ -3,7 +3,6 @@
   <button (click)="onClickAdd()">add</button>
   <ul class="list">
     <li *ngFor="let timer of times, let i = index">
-
       <app-date [second]="timer" (minus)="delete($event,i)"></app-date>
       <button (click)="onRemove(i)">remofe</button>
     </li>
